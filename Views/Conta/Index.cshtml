@@ -1,0 +1,53 @@
+<div class="terminal">
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Contas Bancárias</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Saldo</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var conta in Model)
+                    {
+                        <tr>
+                            <td>@conta.Id</td>
+                            <td>@conta.Nome</td>
+                            <td>@String.Format("{0:N2}", conta.Saldo)</td>
+                            <td>@conta.TipoConta</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- Botões para ações -->
+        <div class="d-flex justify-content-around mb-3">
+            <a href="/Conta/Create" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Nova Conta</a>
+            <a href="/Conta/Transferir" class="btn btn-warning"><i class="fas fa-exchange-alt"></i> Transferir</a>
+            <a href="/Conta/Depositar" class="btn btn-success"><i class="fas fa-dollar-sign"></i> Depositar</a>
+        </div>
+
+
+        <!-- Paginação -->
+        <div class="d-flex justify-content-center">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <a href="/Conta?page=@(ViewBag.CurrentPage - 1)" class="btn btn-primary mx-2">Anterior</a>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                <a href="/Conta?page=@i" class="btn btn-secondary mx-1 @(i == ViewBag.CurrentPage ? "btn-dark" : "")">@i</a>
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <a href="/Conta?page=@(ViewBag.CurrentPage + 1)" class="btn btn-primary mx-2">Próxima</a>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+@model TransferenciaBancariaMVC.Models.TransferenciaViewModel
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Transferência</h2>
+    
+    <form method="post" action="/Conta/Transferir">
+        <div class="mb-3">
+            <label for="ContaOrigem" class="form-label">Conta Origem</label>
+            <input type="number" class="form-control" id="ContaOrigem" name="ContaOrigem" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="ContaDestino" class="form-label">Conta Destino</label>
+            <input type="number" class="form-control" id="ContaDestino" name="ContaDestino" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Valor" class="form-label">Valor</label>
+            <input type="number" class="form-control" id="Valor" name="Valor" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Transferir</button>
+        <a href="/Conta" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

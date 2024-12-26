@@ -1,0 +1,20 @@
+@model TransferenciaBancariaMVC.Models.DepositoViewModel
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Depósito</h2>
+    
+    <form method="post" action="/Conta/Depositar">
+        <div class="mb-3">
+            <label for="ContaId" class="form-label">Conta</label>
+            <input type="number" class="form-control" id="ContaId" name="ContaId" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="Valor" class="form-label">Valor</label>
+            <input type="number" class="form-control" id="Valor" name="Valor" step="0.01" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Depositar</button>
+        <a href="/Conta" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>

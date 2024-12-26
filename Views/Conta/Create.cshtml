@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Nova Conta</h2>
+    <form method="post" action="/Conta/Create" class="row g-3">
+        <div class="col-md-6">
+            <label for="Nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="Nome" name="Nome" required>
+        </div>
+        <div class="col-md-6">
+            <label for="Saldo" class="form-label">Saldo Inicial</label>
+            <input type="number" class="form-control" id="Saldo" name="Saldo" step="0.01" required>
+        </div>
+        <div class="col-md-6">
+            <label for="Tipo" class="form-label">Tipo de Conta</label>
+            <select class="form-select" id="TipoConta" name="TipoConta">
+                <option value="1">Pessoa Física</option>
+                <option value="2">Pessoa Jurídica</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="/Conta" class="btn btn-secondary">Cancelar</a>
+        </div>
+    </form>
+</div>
