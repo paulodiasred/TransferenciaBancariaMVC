@@ -3,7 +3,7 @@
 ![Project Banner](https://img.shields.io/badge/Status-Em%20Desenvolvimento-brightgreen)  
 Um sistema web de gerenciamento de contas bancárias desenvolvido em **ASP.NET Core MVC**.
 
-![Tela Inicial](https://via.placeholder.com/800x400)
+![Tela Inicial](wwwroot/img/home-conta-bancaria.png)
 
 
 ## 📖 Sobre o Projeto
