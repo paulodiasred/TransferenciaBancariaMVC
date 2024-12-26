@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransferenciaBancariaMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bca26eb3abc01868cf8e192d4a1fb50ef7580e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransferenciaBancariaMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransferenciaBancariaMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
